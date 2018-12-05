@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "module": "commonjs",
+    "module": "es2015",
     "strict": true,
     "jsx": "preserve",
     "importHelpers": true,
@@ -13,7 +13,7 @@
     "strictPropertyInitialization": false,
     "strictNullChecks": false,
     "emitDecoratorMetadata": true,
-    "baseUrl": ".",
+    "baseUrl": "http://localhost:8000/",
     "types": [
       "webpack-env",
       "mocha",
