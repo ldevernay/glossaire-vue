@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+      "target": "esnext",
+      "strict": true,
+      "jsx": "preserve",
+      "importHelpers": true,
+      "moduleResolution": "node",
+      "experimentalDecorators": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "sourceMap": true,
+      "strictPropertyInitialization": false,
+      "strictNullChecks": false,
+      "emitDecoratorMetadata": true,
+      "baseUrl": "http://localhost:8000/",
+      "types": [
+        "webpack-env",
+        "mocha",
+        "chai",
+        "reflect-metadata",
+        "node"
+      ],
+      "paths": {
+        "@/*": [
+          "src/*"
+        ]
+      },
+      "lib": [
+        "esnext",
+        "dom",
+        "dom.iterable",
+        "scripthost"
+      ]
+    },
+    "exclude": [
+      "node_modules"
+    ]
+  }
+  
