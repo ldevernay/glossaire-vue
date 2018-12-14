@@ -27,11 +27,6 @@
   export default class Login extends Vue {
     @Provide() private email: string = "admin@admin.com";
     @Provide() private password: string = "password";
-    @State private user: User;
-    @Action('signIn') credentials: object;
-    async login(){
-        return await this.credentials({email: this.email, password: this.password});
-    }
   }
 </script>
 
