@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import Home from './views/Home.vue'
+import Authentication from './views/Authentication.vue'
+
+import Apollo from './components/Apollo.vue'
 
 Vue.use(Router)
 
@@ -19,6 +23,11 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       // @ts-ignore
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+    },
+    {
+        path:"/signup",
+        name: "signup",
+        component: Authentication
     }
   ]
 })

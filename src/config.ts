@@ -1,0 +1,1 @@
+export const LS_AUTH_TOKEN = process.env.VUE_APP_LS_AUTH_TOKEN;
