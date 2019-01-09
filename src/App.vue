@@ -1,13 +1,29 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/signup">Sign Up/In</router-link> |
-    </div>
-    <router-view/>
+      <div id="nav">
+        <router-link to="/">Home</router-link> |
+        <router-link to="/about">About</router-link> |
+        <router-link to="/login" >Login </router-link> |
+        <router-link to="/register" >Register </router-link>
+      </div>
+      <router-view/>
   </div>
 </template>
+
+<script lang="ts">
+  import { Component, Provide, Vue } from "vue-property-decorator";
+  import { LS_AUTH_TOKEN } from "./config";
+  import {Action, Getter, State} from "vuex-class";
+
+
+  @Component
+  export default class App extends Vue {
+    @Provide() user: object = undefined
+    disconnect(){
+        localStorage.removeItem(LS_AUTH_TOKEN);
+    }
+  }
+</script>
 
 <style>
 #app {
