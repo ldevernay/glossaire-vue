@@ -12,7 +12,7 @@
       "strictPropertyInitialization": false,
       "strictNullChecks": false,
       "emitDecoratorMetadata": true,
-      "baseUrl": "http://localhost:8000/",
+      "baseUrl": "http://localhost:3000/",
       "types": [
         "webpack-env",
         "mocha",
@@ -36,4 +36,3 @@
       "node_modules"
     ]
   }
-  
