@@ -13,11 +13,3 @@ export const register = gql`
       }
   } 
 `;
-
-export const me = gql`
-    query {
-        me{
-            email
-        }
-    }
-`;

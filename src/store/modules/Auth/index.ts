@@ -1,7 +1,7 @@
 import {GetterTree, MutationTree, ActionTree, ActionContext} from "vuex";
 import {State} from "./types";
 // Graphql module
-import {login, me, register} from "./schema";
+import {login, register} from "./schema";
 // @ts-ignore
 import { apolloClient } from "@/ApolloClient.ts"
 // @ts-ignore
