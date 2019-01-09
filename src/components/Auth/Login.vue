@@ -14,19 +14,25 @@
         <button type="submit">Send</button>
       </div>
     </form>
-    {{ user.email }}
   </section>
 </template>
 
 <script lang="ts">
   import { Component, Provide, Vue } from "vue-property-decorator";
-  import {Action, Getter, State} from "vuex-class";
-  import {User} from "@/store/modules/Auth/types";
+  import {Action} from "vuex-class";
 
   @Component
   export default class Login extends Vue {
     @Provide() private email: string = "admin@admin.com";
     @Provide() private password: string = "password";
+    @Action("LOGIN") LOGIN;
+
+    login(){
+        this.LOGIN({email: this.email, password: this.password})
+            .then(() => {
+                this.$router.push("about")
+            });
+    }
   }
 </script>
 
