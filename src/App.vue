@@ -4,7 +4,10 @@
         <router-link to="/">Home</router-link> |
         <router-link to="/about">About</router-link> |
         <router-link to="/login" >Login </router-link> |
-        <router-link to="/register" >Register </router-link>
+        <router-link to="/register" >Register </router-link> |
+        <router-link to="/users" >Users </router-link> |
+        <router-link to="/user" >Me</router-link> |
+        <a href="#" @click.prevent="logout">Disconnect</a>
       </div>
       <router-view/>
   </div>
@@ -13,14 +16,14 @@
 <script lang="ts">
   import { Component, Provide, Vue } from "vue-property-decorator";
   import { LS_AUTH_TOKEN } from "./config";
-  import {Action, Getter, State} from "vuex-class";
-
-
   @Component
   export default class App extends Vue {
-    @Provide() user: object = undefined
-    disconnect(){
+    @Provide() user: object = undefined;
+
+    logout(){
+        console.log("disconnect")
         localStorage.removeItem(LS_AUTH_TOKEN);
+        this.$router.push("login")
     }
   }
 </script>

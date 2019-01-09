@@ -4,6 +4,8 @@ import Router from 'vue-router'
 import Home from './views/Home'
 import Login from './components/Auth/Login'
 import Register from "./components/Auth/Register";
+import Index from "./components/User/Index";
+import Show from "./components/User/Show";
 
 import Apollo from './components/Apollo.vue'
 import {LS_AUTH_TOKEN} from "./config";
@@ -38,6 +40,22 @@ const router = new Router({
         path:"/register",
         name:"register",
         component: Register
+    },
+    {
+        path: "/users",
+        name: "users",
+        component: Index,
+        meta:{
+            requireAuth: true
+        }
+    },
+    {
+        path: "/user",
+        name: "user",
+        component: Show,
+        meta:{
+            requireAuth: true
+        }
     }
   ]
 });
