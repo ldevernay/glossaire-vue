@@ -5,6 +5,6 @@ export interface State {
 }
 
 export interface User {
-    id: string
+    id: number
     email: string
 }
