@@ -7,6 +7,9 @@
         <router-link to="/register" >Register </router-link> |
         <router-link to="/users" >Users </router-link> |
         <router-link to="/user" >Me</router-link> |
+        <router-link to="/word">Words</router-link> |
+        <router-link to="/word/create">Create Word</router-link> |
+        <router-link to="/word/show/1">Show First Word</router-link> |
         <a href="#" @click.prevent="logout">Disconnect</a>
       </div>
       <router-view/>
