@@ -9,7 +9,7 @@
   import {Action, Getter} from "vuex-class"
 
   @Component
-  export default class Show extends Vue {
+  export default class ShowUser extends Vue {
     @Action("GET_CURRENT_USER") currentUser;
     @Getter('getCurrentUser') user;
 

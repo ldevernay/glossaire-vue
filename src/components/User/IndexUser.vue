@@ -12,7 +12,7 @@
   import {Action, Getter} from 'vuex-class';
 
   @Component
-  export default class Index extends Vue {
+  export default class IndexUser extends Vue {
       @Action("GET_ALL_USERS") allUsers;
       @Getter("getAllUser") users;
 
