@@ -19,10 +19,15 @@ const getters: GetterTree<State, any> = {
 
 const mutations: MutationTree<State> = {
     GET_DATA_WORDS(state){
+        console.log("here")
         apolloClient.query({
             query: getWords
         })
-            .then(res => res.data.words.forEach(word => state.words.push(word)))
+            .then(res => {
+                console.log(res.data.words);
+                state.words = res.data.words
+                console.log('here', state.words)
+            })
             .catch(err => err ? console.error(err.message) : "")
     },
     GET_DATA_WORD(state, payload){

@@ -18,7 +18,8 @@
       @Action('GET_WORD') getWord;
       @Getter("getWords") words;
 
-      created(){
+      mounted(){
+          console.log('mount')
           this.getAllWords();
       }
 

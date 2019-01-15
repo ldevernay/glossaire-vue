@@ -5,8 +5,8 @@
         <router-link to="/about">About</router-link> |
         <router-link to="/login" >Login </router-link> |
         <router-link to="/register" >Register </router-link> |
-        <router-link to="/users" >Users </router-link> |
-        <router-link to="/user" >Me</router-link> |
+        <router-link to="/user" >Users </router-link> |
+        <router-link to="/user/profile" >Me</router-link> |
         <router-link to="/word">Words</router-link> |
         <router-link to="/word/create">Create Word</router-link> |
         <a href="#" @click.prevent="logout">Disconnect</a>

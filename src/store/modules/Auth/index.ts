@@ -17,7 +17,7 @@ const getters: GetterTree<State, any> = {
 };
 
 const mutations: MutationTree<State> = {
-    mutateLogin(state, payload){
+    SEND_LOGIN(state, payload){
         apolloClient.mutate({
             mutation: login,
             variables:{
@@ -34,7 +34,7 @@ const mutations: MutationTree<State> = {
 
 const actions: ActionTree<State, any> = {
     LOGIN({commit}, payload){
-        commit("mutateLogin", payload);
+        commit("SEND_LOGIN", payload);
     },
     REGISTER({commit}, payload){
         if(payload.password === payload.passwordRepeat){

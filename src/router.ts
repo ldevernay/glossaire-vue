@@ -5,10 +5,11 @@ import Home from './views/Home';
 import Login from './components/Auth/Login';
 
 import Register from "./components/Auth/Register";
-import IndexUser from "./components/User/IndexUser";
+import IndexUser from "./views/IndexUser";
+import ListUser from "./components/User/ListUser";
 import ShowUser from "./components/User/ShowUser";
 
-import IndexWord from "./components/Word/IndexWord";
+import IndexWord from "./views/IndexWord";
 import ListWord from "./components/Word/ListWord";
 import CreateWord from "./components/Word/CreateWord";
 import ShowWord from "./components/Word/ShowWord";
@@ -48,17 +49,19 @@ const router = new Router({
         component: Register
     },
     {
-        path: "/users",
-        name: "users",
-        component: IndexUser,
-        meta:{
-            requireAuth: true
-        }
-    },
-    {
         path: "/user",
         name: "user",
-        component: ShowUser,
+        component: IndexUser,
+        children:[
+            {
+                path:"",
+                component: ListUser
+            },
+            {
+                path:"profile",
+                component: ShowUser
+            }
+        ],
         meta:{
             requireAuth: true
         }
@@ -81,7 +84,10 @@ const router = new Router({
                 component: ShowWord
             },
 
-        ]
+        ],
+        meta:{
+            requireAuth: true
+        }
     }
   ]
 });

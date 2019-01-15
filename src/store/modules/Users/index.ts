@@ -22,7 +22,7 @@ const mutations: MutationTree<State> = {
         apolloClient.query({
             query: allUser,
         })
-            .then(res => res.data.users.forEach(user  => state.users.push(user)))
+            .then(res => state.users = res.data.users)
             .catch(err => err ? console.log(err) : "");
     },
     GET_DATA_CURRENT_USER(state, payload){
